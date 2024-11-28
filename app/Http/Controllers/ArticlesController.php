@@ -53,9 +53,21 @@ class ArticlesController extends Controller
          ]);
    
          $art = Article::create($validatedData);
+         return redirect('/articles')->with(['success_message' => 'L\'article a été crée !']);;
     }
     public function edit(Article $article)
 {
     return view('articles.edit', compact('article'));
+}
+public function update(Request $request, Article $article)
+{
+    $article->update($request->all());
+    return redirect('/articles');
+}
+public function delete(Article $article)
+{
+    // vérification des permissions plus tard
+    $article->delete();
+    return redirect('/articles');
 }
 }

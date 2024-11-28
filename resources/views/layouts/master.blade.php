@@ -144,6 +144,7 @@
     <a href="/about-us">A propo</a>
     <a href="/articles">Articles</a>
     <a href="/articles/create">Créer un article</a>
+    @include('messages.allMessages')
     <div class="container">
         @yield('content') 
     </div>
