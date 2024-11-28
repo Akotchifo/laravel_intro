@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -18,4 +19,5 @@ class PagesController extends Controller
     public function about(){
         return view('layouts.about');
     }
+   
 }

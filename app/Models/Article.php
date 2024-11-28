@@ -21,4 +21,15 @@ class Article extends Model
    public function comments(){
     return $this->hasMany(Comment::class);
     }
+
+    protected $appends = [
+        'author'
+    ];
+    // !! Le nom de cette méthode n'est pas optionnel !!
+    // get 'author' attribute
+    // méthode obligatoire pour faire fonctionner notre $appends
+    public function getAuthorAttribute()
+    {
+        return $this->user->name;
+    }
 }

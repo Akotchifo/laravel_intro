@@ -1,1 +1,1 @@
-<p>Pas d'article disponible</p>
+<p class="no-articles">Aucun article trouvé.</p>
