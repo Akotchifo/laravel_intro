@@ -6,8 +6,6 @@ use App\Models\Article;
 use App\Models\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controllers\HasMiddleware; 
-use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller  
