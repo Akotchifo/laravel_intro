@@ -78,8 +78,8 @@
 
     <div class="container">
         <h2>Inscription</h2>
-        <form action="traitement.php" method="POST">
-
+        <form action="{{ route('register') }}" method="POST">
+        @csrf
             <div class="form-group">
                 <label for="name">Nom complet</label>
                 <input type="text" id="name" name="name" required placeholder="Entrez votre nom">

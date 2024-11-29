@@ -143,10 +143,26 @@
     <a href="/contact-us">Contactez-nous</a>
     <a href="/about-us">A propo</a>
     <a href="/articles">Articles</a>
+    @can('create', 'App\Models\Article')
     <a href="/articles/create">Créer un article</a>
+    @endcan
+    <!-- @auth
+    <a href="/articles/create">Ajoutez un article</a>
+    @endauth -->
+    @guest
+    <a href="{{ route('register') }}">Créer un compte</a>
+    <a href="{{ route('login') }}">Login</a>
+    @endguest
+    @auth
+    <a href="{{ route('profile') }}">Votre profil</a>
+    <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <input type="submit" value="Se déconnecter">
+    </form>
+    @endauth
     @include('messages.allMessages')
     <div class="container">
-        @yield('content') 
+        @yield('content')
     </div>
 </body>
 

@@ -78,7 +78,8 @@
 
     <div class="container">
         <h2>Inscription</h2>
-        <form action="traitement.php" method="POST">
+        <form action="{{ route('login') }}" method="POST">
+        @csrf
             <div class="form-group">
                 <label for="email">Adresse email</label>
                 <input type="email" id="email" name="email" required placeholder="Entrez une adresse email">
